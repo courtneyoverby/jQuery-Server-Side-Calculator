@@ -3,12 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Courtney's Calculator</title>
+    <script src="vendors/jquery.js"></script>
+    <script src="scripts/client.js"></script>
   </head>
   <body>
     <div class="js-input-value">
-      <input type="number" placeholder="number" />
-      <input type="number" placeholder="number" />
+      <input
+        class="inputOne input"
+        type="number"
+        placeholder="number"
+        id="number1"
+        name="number1"
+      />
+      <input
+        class="inputTwo input"
+        type="number"
+        placeholder="number"
+        id="number2"
+        name="number2"
+      />
+    </div>
+
+    <div class="js-equation-btns">
+      <button class="js-btn-math" id="+">+</button>
+      <button class="js-btn-math" id="-">-</button>
+      <button class="js-btn-math" id="x">x</button>
+      <button class="js-btn-math" id="/">/</button>
+      <button class="js-submit-btn">=</button>
+      <button class="js-clear-btn">Clear</button>
     </div>
   </body>
 </html>
