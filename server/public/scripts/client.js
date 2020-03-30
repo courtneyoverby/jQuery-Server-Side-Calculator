@@ -5,6 +5,7 @@ function onReady() {
   $(".js-clear-btn").on("click", clearInputFields);
   $(".js-btn-math").on("click", operatorID);
   console.log("hello");
+  getObject();
 }
 
 let operator
@@ -27,6 +28,7 @@ function saveObject(objectData) {
     data: objectData
   })
     .then(response => {
+      getObject();
       console.log(response);
     })
     .catch(err => {
@@ -45,6 +47,23 @@ function operatorID() {
 
   console.log(operator);
 
-
 }
 
+function getObject () {
+$.ajax({
+  type: "GET",
+  url: "/solutions"
+}).then(function(response) {
+  console.log(response)
+  for (let i = 0; i < response.length; i++) {
+    let solution = response[i];
+    $(".js-calc-table").append(`
+              <tr>
+                  <td>${solution.val1} ${solution.operator} ${solution.val2} = ${solution.answer}</td>
+              </tr>
+          `);
+  }
+});
+
+
+}

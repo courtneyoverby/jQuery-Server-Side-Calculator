@@ -6,7 +6,7 @@ const PORT = 5000;
 app.use(express.static("server/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-let answer = '';
+let answer;
 let opsAndSolutions = [];
 
 app.post("/answer", (req, res) => {
@@ -55,7 +55,7 @@ function subtractSomeNums(a, b){
 }
 
 function multiplySomeNums(a, b) {
-  answer = a*b;
+  answer = a * b;
   console.log(answer)
   return answer
 }
@@ -66,7 +66,7 @@ function divideSomeNums(a, b) {
   return answer
 }
 
-app.get("/Solutions", (req, res) => {
+app.get("/solutions", (req, res) => {
   res.send(opsAndSolutions);
 });
 
