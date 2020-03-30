@@ -4,11 +4,11 @@ function onReady() {
   $(".js-submit-btn").on("click", onSubmit);
   $(".js-clear-btn").on("click", clearInputFields);
   $(".js-btn-math").on("click", operatorID);
-  console.log("hello");
   getObject();
 }
 
 let operator
+let history = []
 
 function onSubmit() {
   event.preventDefault();
@@ -54,7 +54,7 @@ $.ajax({
   type: "GET",
   url: "/solutions"
 }).then(function(response) {
-  console.log(response)
+  $(".js-calc-table").empty();
   for (let i = 0; i < response.length; i++) {
     let solution = response[i];
     $(".js-calc-table").append(`
@@ -64,6 +64,4 @@ $.ajax({
           `);
   }
 });
-
-
 }
