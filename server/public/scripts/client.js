@@ -14,7 +14,7 @@ function onSubmit() {
   const inputObject = {
     input1: parseInt($(".inputOne").val()),
     input2: parseInt($(".inputTwo").val()),
-    // : operator
+    mathOperator: operator
   };
   saveObject(inputObject);
   console.log(inputObject);
