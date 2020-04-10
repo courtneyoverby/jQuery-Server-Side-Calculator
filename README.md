@@ -1,9 +1,9 @@
-# Project Name
+# JQuery Server Side Calculator
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+This week, we were prompted to create a functioning calculator on the DOM.
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This project acts as a calculator by allowing a client to enter a mathematical equation resulting in the answer to the equation. All previous equations entered will be stored on the DOM below the operators.
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
